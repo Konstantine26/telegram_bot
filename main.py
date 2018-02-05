@@ -24,14 +24,15 @@ def handle_it (message):
     keyboard.add(*[types.KeyboardButton(name) for name in ['Шерлок ', ' Ватсон']])
     bot.send_message(message.chat.id, 'Кого выбираешь?', reply_markup =keyboard)
     if message.text == 'Шерлок':
-        bot.send_message(message.chat.id, 'looopl')
-        #keyboard = types.ReplyKeyboardMarkup
-        bot.send_message(message.chat.id, 'looopl')
-        bot.register_next_step_handler(message, handle_it )
-    elif message.text == 'Ватсон':
-        #keyboard = types.ReplyKeyboardMarkup
-        bot.send_message(message.chat.id, 'loool')
-        bot.register_next_step_handler(message, handle_it)
+       bot.send_message(message.chat.id, 'looopl')
+       #keyboard = types.ReplyKeyboardMarkup
+       bot.send_message(message.chat.id, 'looopl')
+       bot.register_next_step_handler(message, handle_it )
+    else:
+       message.text == 'Ватсон'
+       #keyboard = types.ReplyKeyboardMarkup
+       bot.send_message(message.chat.id, 'loool')
+       bot.register_next_step_handler(message, handle_it)
 
 @bot.message_handler(content_types= [''])
 def handle_text(message):
